@@ -16,7 +16,15 @@ class Column extends Model
      */
     protected $fillable = [
         'title',
+        'user_id',
     ];
+
+    /**
+     * The storage format of the model's date columns.
+     *
+     * @var string
+     */
+    protected $dateFormat = 'Y-m-d H:i:s';
 
     /**
      * Card Table Relationship

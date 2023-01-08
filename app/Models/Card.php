@@ -17,7 +17,14 @@ class Card extends Model
     protected $fillable = [
         'title',
         'description',
+        'column_id',
     ];
+    /**
+     * The storage format of the model's date columns.
+     *
+     * @var string
+     */
+    protected $dateFormat = 'Y-m-d H:i:s';
     public function column(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
         return $this->belongsTo(Column::class);
